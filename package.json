@@ -1,0 +1,22 @@
+{
+  "name": "@stefanprobst/next-feed",
+  "version": "1.0.0",
+  "main": "out.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "files": [
+    "out.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "yarn esbuild --bundle index.mjs --platform=node --minify --outfile=out.js",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "xast-util-feed": "^1.2.0",
+    "xast-util-to-xml": "^3.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.15"
+  }
+}
